@@ -1,0 +1,4 @@
+#!/bin/bash
+mv www www-$(date +%Y%m%d)-$(date +%H%M%S)
+mv beta www
+cp -R www beta

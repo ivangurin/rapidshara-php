@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /var/www/rapidshara.ru/www/service
+php references_delete.php
+php files_delete.php
+php files_remove.php
+
+

@@ -1,0 +1,39 @@
+Options -Indexes
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_METHOD} HEAD
+RewriteRule .* - [F]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ http://%1/$1 [L,R]
+
+RewriteRule ^lite$                           /index.php?lite=
+
+RewriteRule ^([0-9]+)$                       /file_download.php?id=$1
+RewriteRule ^([0-9]+)/(.*\..*)$              /file_download.php?id=$1&name=$2
+RewriteRule ^upload$                         /file_upload.php
+RewriteRule ^([0-9]+)/links$                 /file_links.php?id=$1
+RewriteRule ^([0-9]+)/change$                /file_change.php?id=$1
+RewriteRule ^([0-9]+)/delete$                /file_delete.php?id=$1
+RewriteRule ^([0-9]+)/remove$                /file_remove.php?id=$1
+RewriteRule ^([0-9]+)/restore$               /file_restore.php?id=$1
+
+RewriteRule ^files$                          /files.php
+RewriteRule ^files/(.*)$                     /files.php?report=$1
+
+RewriteRule ^reports/(.*)/(.*)/page([0-9]+)$ /reports.php?section=$1&report=$2&page=$3
+RewriteRule ^reports/(.*)/(.*)$              /reports.php?section=$1&report=$2
+RewriteRule ^reports/(.*)$                   /reports.php?section=$1
+RewriteRule ^reports$                        /reports.php
+
+RewriteRule ^registration$                   /user_create.php
+RewriteRule ^profile$                        /user_change.php
+RewriteRule ^profile/([0-9]+)$               /user_change.php?id=$1
+RewriteRule ^entry$                          /user_entry.php
+RewriteRule ^exit$                           /user_exit.php
+
+RewriteRule ^rules$                          /rules.php
+RewriteRule ^customize$                      /customize.php
+RewriteRule ^f([0-9]+)$                      http://rapidshara.ifolder.ru/f$1

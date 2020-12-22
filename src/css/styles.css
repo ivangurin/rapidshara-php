@@ -1,0 +1,100 @@
+html, body, div, span, table{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+body{
+    font-size: 12px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+a:link         {color: #0066CC;}
+a:hover        {color: #00CC00;}
+a:visited      {color: #006600;}
+a:visited:hover{color: #00CC00;}
+
+a.menu:visited {color: #0066CC;}
+
+a.pikucha              {color: #0066CC;}
+a.pikucha:hover        {color: #FF6600;}
+a.pikucha:visited      {color: #0066CC;}
+a.pikucha:visited:hover{color: #FF6600;}
+
+a.exit                 {color: #FF0000;}
+a.exit:hover           {color: #FF0000;}
+a.exit:visited         {color: #FF0000;}
+
+.ActivePage    {color: #00CC00;}
+
+table.main{
+    width: 100%;
+    height: 100%;
+    border: 0px dotted grey;
+    border-collapse: collapse;
+}
+
+table.report, table.report td{
+    border: 1px solid #999999;
+    border-collapse: collapse;
+}
+
+div.upload{
+    width: 60%;
+}
+
+div.progress{
+    display: none;
+}
+
+table.dl{
+    width: 100%;
+    table-layout: fixed;
+}
+
+td.dl_left{
+    width: 50%;
+    padding-right: 5px;
+    vertical-align: top;
+    text-align: right;
+}
+
+td.dl_left_p{
+    width: 50%;
+    padding-right: 5px;
+    vertical-align: middle;
+    text-align: right;
+    color: #FF0000;
+}
+
+td.dl_right{
+    width: 50%;
+    padding-left: 5px;
+}
+
+#adv{
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: Georgia, Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-style: italic;
+    color: #666666;
+    border: 0px solid red;
+}
+
+#adv_link{
+    color: #666666;
+}
+
+#adv_dropbox{
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    border: 0px solid red;
+}
+
+#adv_dropbox a{
+    color: #0066CC;
+}
+
